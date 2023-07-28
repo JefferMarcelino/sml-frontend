@@ -1,0 +1,63 @@
+body {
+  width: 100%;
+  padding: 1.25rem;
+  background: rgb(236, 234, 234);
+}
+
+body .container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid rgb(168, 163, 163);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+body .container h1 {
+  margin-bottom: 1rem;
+}
+
+body .container p {
+  margin-bottom: 1rem;
+}
+
+body .box {
+  width: 100%;
+}
+
+body .editor {
+  position: relative;
+}
+
+body .editor #runButton {
+  position: absolute;
+  right: .5rem;
+  top: .5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+body .editor #output {
+  position: relative;
+  min-height: 100px;
+  height: 100%;
+  width: 100%;
+  border: 1px solid rgb(189, 180, 180);
+  margin-top: 1rem;
+  padding: 0.625rem;
+}
+
+body .editor #output #executionTime {
+  position: absolute;
+  right: 0rem;
+  top: 0rem;
+  background-color: green;
+  padding: .2rem;
+  color: white;
+  font-size: .9rem;
+}
+
+body .editor.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
