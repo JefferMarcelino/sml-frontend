@@ -20,17 +20,21 @@ const App = () => {
 
     const startTime = performance.now();
 
-    const result = await axios.post(import.meta.env.VITE_BASE_API_URL, {
-      code: code
-    });
-
+    try {  
+      const result = await axios.post(import.meta.env.VITE_BASE_API_URL, {
+        code: code
+      });
+  
+      setOutput(result.data.result);
+    } catch (error) {
+      setOutput("Algo correu mal!");
+    }
+    
     const endTime = performance.now();
     const executionTime = endTime - startTime;
-
-    setOutput(result.data.result);
+    setExecutionTime(executionTime);
 
     setIsLoading(false);
-    setExecutionTime(executionTime);
   };
 
   return (
