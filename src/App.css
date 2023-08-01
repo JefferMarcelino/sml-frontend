@@ -133,5 +133,6 @@ body .editor.disabled {
 @media (max-width: 793px) {
   body #hero {
     background: url("/hero.png") 200px no-repeat;
+    background-size: cover;
   }
 }
