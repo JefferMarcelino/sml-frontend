@@ -19,13 +19,19 @@ body #header .logo img {
   width: 100%;
 }
 
+body section {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding: 1.25rem;
+}
+
 body #hero {
   background: url("/hero.png") right no-repeat;
   min-height: 80vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.25rem;
+  margin: 0;
 }
 
 body .wrapper {
@@ -44,7 +50,7 @@ body .content .text {
   width: 100%;
 }
 
-body .content .text span {
+body #hero .content .text span {
   font-size: 3.5rem;
 }
 
@@ -67,6 +73,11 @@ body .container h1 {
 
 body .container p {
   margin-bottom: 1rem;
+}
+
+body #playground {
+  margin: 0;
+  padding: 0;
 }
 
 body .box {
@@ -124,8 +135,33 @@ body .editor.disabled {
   pointer-events: none;
 }
 
+body #join-samora-lang .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+body #join-samora-lang .content .img {
+  width: 100%;
+  max-width: 400px;
+}
+
+body #join-samora-lang .content .text {
+  max-width: 500px;
+}
+
+body #join-samora-lang .content .text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+body #join-samora-lang .content .text p {
+  line-height: 1.5rem;
+}
+
 @media (max-width: 470px) {
-  body .content .text span {
+  body #hero .content .text span {
     font-size: 3rem;
   }
 }
