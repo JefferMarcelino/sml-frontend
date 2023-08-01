@@ -1,12 +1,62 @@
 body {
   width: 100%;
-  background: rgb(236, 234, 234);
+  background: white;
+  margin-bottom: 1rem;
+}
+
+body #header {
+  position: absolute;
+  width: 100%;
+  padding: .5rem 1.25rem;
+}
+
+body #header .logo {
+  max-width: 250px;
+  width: 100%;
+}
+
+body #header .logo img {
+  width: 100%;
+}
+
+body #hero {
+  background: url("/hero.png") right no-repeat;
+  min-height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+}
+
+body .wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+body .content {
+  gap: 1rem;
+  width: 100%;
+}
+
+body .content .text {
+  max-width: 400px;
+  width: 100%;
+}
+
+body .content .text span {
+  font-size: 3.5rem;
+}
+
+body .content .text .bold {
+  color: #ED1C24;
+  font-weight: 500;
 }
 
 body .container {
   max-width: 1000px;
   width: 100%;
-  margin: 1rem auto;
+  margin: 0 auto;
   border: 1px solid rgb(168, 163, 163);
   padding: 1rem;
 }
@@ -72,4 +122,16 @@ body .editor #output #executionTime {
 body .editor.disabled {
   opacity: 0.5;
   pointer-events: none;
+}
+
+@media (max-width: 470px) {
+  body .content .text span {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 793px) {
+  body #hero {
+    background: url("/hero.png") 200px no-repeat;
+  }
 }
