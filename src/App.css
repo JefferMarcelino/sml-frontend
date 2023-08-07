@@ -3,21 +3,6 @@ body {
   margin-bottom: 1rem;
 }
 
-body #header {
-  position: absolute;
-  width: 100%;
-  padding: .5rem 1.25rem;
-}
-
-body #header .logo {
-  max-width: 250px;
-  width: 100%;
-}
-
-body #header .logo img {
-  width: 100%;
-}
-
 body section {
   margin-top: 4rem;
   margin-bottom: 4rem;
@@ -25,7 +10,6 @@ body section {
 }
 
 body #hero {
-  min-height: 80vh;
   display: flex;
   justify-content: space-between;
   align-items: center;

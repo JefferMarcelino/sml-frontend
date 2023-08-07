@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect } from 'react';
 import './App.css';
 import Editor from './Components/Editor';
-import samoraLang from "/samora-logo.png";
+import Header from './Components/Header';
 import samoraLangLogo from "/samora-lang-logo.svg";
 import arrowRight from "./assets/arrow-right.svg";
 
@@ -23,13 +23,8 @@ const App = () => {
 
   return (
     <>
-      <header id="header">
-        <div className="wrapper">
-          <div className="logo">
-            <img src={samoraLang} alt="" />
-          </div>
-        </div>
-      </header>
+      <Header />
+
       <main>
         <section id="hero">
           <div className="wrapper">

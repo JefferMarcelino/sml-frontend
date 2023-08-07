@@ -22,3 +22,7 @@ a {
   color: #ED1C24;
   font-weight: 500;
 }
+
+ul li {
+  list-style: none;
+}
