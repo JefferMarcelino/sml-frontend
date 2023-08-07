@@ -44,12 +44,35 @@ body .content {
 }
 
 body .content .text {
-  max-width: 400px;
+  max-width: 550px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 body #hero .content .text span {
-  font-size: 3.5rem;
+  font-size: 4rem;
+  line-height: 110%;
+  font-weight: 700;
+}
+
+body #hero .content .text {
+  font-size: 1.25rem;
+}
+
+body #hero .content .text #goToPlaugroundBtn {
+  padding: 1rem 1.5rem;
+  font-size: 1.375rem;
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  border-radius: 4px;
+  background: linear-gradient(196deg, #ED1C24 28.47%, #530A0D 88.82%);
+  color: white;
+  text-decoration: none;
+  max-width: 200px;
+  width: 100%;
 }
 
 body .content .text .bold {

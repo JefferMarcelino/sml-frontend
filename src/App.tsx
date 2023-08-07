@@ -4,6 +4,7 @@ import './App.css';
 import Editor from './Components/Editor';
 import samoraLang from "/samora-logo.png";
 import samoraLangLogo from "/samora-lang-logo.svg";
+import arrowRight from "./assets/arrow-right.svg";
 
 const App = () => {
   useEffect(() => {
@@ -34,7 +35,13 @@ const App = () => {
           <div className="wrapper">
             <div className="content">
               <div className="text">
-                <span>Um novo paradigma de <span className="bold">Programação!</span></span>
+                <span>Experimente um novo paradigma de <span className="bold">programação!</span></span>
+                <p>Descubra a magia da codificação no nosso Playground! Experimente agora mesmo.</p>
+
+                <a id="goToPlaugroundBtn" href="#playground">
+                  Playground
+                  <img src={ arrowRight } alt="" />
+                </a>
               </div>
             </div>
           </div>
