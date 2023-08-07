@@ -64,7 +64,7 @@ const App = () => {
               <div className="text">
                 <h2>O que acha de se tornar um <span className="bold">colaborador</span>?</h2>
                 <p>Junte-se ao projeto Samora Lang! Se você é um entusiasta do desenvolvimento de software e deseja fazer a diferença em um ambiente de código aberto, esta é a sua chance.</p>
-                <p>Contribua diretamente com o <a href="https://github.com/GraHms/Samora-Lang">interpretador</a> ou no <a href="https://github.com/JefferMarcelino/sml-playground">backend do playground</a> e esse <a href="https://github.com/JefferMarcelino/sml-frontend">website</a>.</p>
+                <p>Contribua diretamente com o <a href="https://github.com/GraHms/Samora-Lang" target='_blank'>interpretador</a> ou no <a href="https://github.com/JefferMarcelino/sml-playground" target='_blank'>backend do playground</a> e esse <a href="https://github.com/JefferMarcelino/sml-frontend" target='_blank'>website</a>.</p>
               </div>
             </div>
           </div>
