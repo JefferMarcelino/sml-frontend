@@ -77,7 +77,7 @@ body #playground .container {
   gap: 1.25rem;
 }
 
-body #playground .container .copyright {
+body .copyright {
   color: #767676;
 }
 
@@ -112,6 +112,10 @@ body #join-samora-lang .content .img {
   max-width: 400px;
 }
 
+body #join-samora-lang .content .img img {
+  width: 100%;
+}
+
 body #join-samora-lang .content .text {
   max-width: 550px;
 }
@@ -128,15 +132,23 @@ body #join-samora-lang .content .text p {
   font-weight: 300;
 }
 
+footer {
+  padding: 1.25rem;
+}
+
+footer .wrapper {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-top: 2px solid rgba(255, 255, 255, 0.20);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @media (max-width: 470px) {
   body #hero .content .text span {
     font-size: 3rem;
   }
-}
-
-@media (max-width: 793px) {
-  /*body #hero {
-    background: url("/hero.png") 200px no-repeat;
-    background-size: cover;
-  }*/
 }
