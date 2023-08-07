@@ -113,16 +113,19 @@ body #join-samora-lang .content .img {
 }
 
 body #join-samora-lang .content .text {
-  max-width: 500px;
+  max-width: 550px;
 }
 
 body #join-samora-lang .content .text h2 {
-  font-size: 2.5rem;
+  font-size: 2.625rem;
   margin-bottom: 1rem;
 }
 
 body #join-samora-lang .content .text p {
   line-height: 1.5rem;
+  font-size: 1.25rem;
+  color: #d1d1d1;
+  font-weight: 300;
 }
 
 @media (max-width: 470px) {

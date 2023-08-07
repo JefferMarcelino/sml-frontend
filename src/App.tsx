@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import './App.css';
 import Editor from './Components/Editor';
 import Header from './Components/Header';
-import samoraLangLogo from "/samora-lang-logo.svg";
+import joinSML from "/join-sml.png";
 import arrowRight from "./assets/arrow-right.svg";
 
 const App = () => {
@@ -58,7 +58,7 @@ const App = () => {
           <div className="wrapper">
             <div className="content">
               <div className="img">
-                <img src={ samoraLangLogo } alt="" />
+                <img src={ joinSML } alt="" />
               </div>
               <div className="text">
                 <h2>O que acha de se tornar um <span className="bold">colaborador</span>?</h2>

@@ -11,7 +11,7 @@ import "./custom-prism-theme.css";
 
 const Editor = () => {
   const [ code, setCode ] = useState('print("Olá, SamoraLang!");');
-  const [ output, setOutput ] = useState('sss');
+  const [ output, setOutput ] = useState('');
   const [ isLoading, setIsLoading ] = useState(false);
   const [ executionTime, setExecutionTime ] = useState(0);
 
