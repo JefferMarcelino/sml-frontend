@@ -4,6 +4,7 @@ import SimpleCodeEditor from "react-simple-code-editor";
 import { highlight, languages } from "prismjs/";
 import { Play } from 'phosphor-react';
 
+import "./index.css";
 import "prismjs/components/prism-clike";
 import "prismjs/components/prism-javascript";
 import "prismjs/themes/prism.css";
@@ -97,7 +98,7 @@ print("A soma dos números ao quadrado é: ", sum);`
   ];
 
   return (
-    <div className={`editor ${isLoading ? "disabled" : ""}`}>
+    <div id="editor" className={`${isLoading ? "disabled" : ""}`}>
       <div id="dropdown-examples">
         <span>Escolha um exemplo: </span>
         <select onChange={(e) => handleDropdownItemClick(e.target.value)}>
