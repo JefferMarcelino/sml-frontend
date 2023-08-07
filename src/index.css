@@ -6,6 +6,9 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Exo 2', sans-serif;
   background: #1A1A1A;
