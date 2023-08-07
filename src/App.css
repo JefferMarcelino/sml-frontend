@@ -1,6 +1,5 @@
 body {
   width: 100%;
-  background: white;
   margin-bottom: 1rem;
 }
 
@@ -26,7 +25,6 @@ body section {
 }
 
 body #hero {
-  background: url("/hero.png") right no-repeat;
   min-height: 80vh;
   display: flex;
   justify-content: space-between;
@@ -167,8 +165,8 @@ body #join-samora-lang .content .text p {
 }
 
 @media (max-width: 793px) {
-  body #hero {
+  /*body #hero {
     background: url("/hero.png") 200px no-repeat;
     background-size: cover;
-  }
+  }*/
 }
