@@ -2,8 +2,10 @@ import axios from 'axios';
 import { useEffect } from 'react';
 import './App.css';
 import Editor from './Components/Editor';
-import samoraLang from "/samora-logo.png";
-import samoraLangLogo from "/samora-lang-logo.svg";
+import Header from './Components/Header';
+import joinSML from "/join-sml.png";
+import arrowRight from "./assets/arrow-right.svg";
+import samoraLangLogo from "/samoralang-logo.svg";
 
 const App = () => {
   useEffect(() => {
@@ -22,19 +24,20 @@ const App = () => {
 
   return (
     <>
-      <header id="header">
-        <div className="wrapper">
-          <div className="logo">
-            <img src={samoraLang} alt="" />
-          </div>
-        </div>
-      </header>
+      <Header />
+
       <main>
         <section id="hero">
           <div className="wrapper">
             <div className="content">
               <div className="text">
-                <span>Um novo paradigma de <span className="bold">Programação!</span></span>
+                <span>Experimente um novo paradigma de <span className="bold">programação!</span></span>
+                <p>Descubra a magia da codificação no nosso Playground! Experimente agora mesmo.</p>
+
+                <a id="goToPlaugroundBtn" href="#playground">
+                  Playground
+                  <img src={ arrowRight } alt="" />
+                </a>
               </div>
             </div>
           </div>
@@ -42,13 +45,13 @@ const App = () => {
 
         <section id="playground">
           <div className="container">
-            <h2>SamoraLang Playground</h2>
+            <h2>Playground</h2>
 
             <div className="box">
-              <p>Experimente e pratique SamoraLang. Escreva o seu codigo abaixo e clique no botão no canto para rodar!</p>
-
               <Editor />
             </div>
+
+            <p className="copyright">SamoraLang Playground © 2023</p>
           </div>
         </section>
 
@@ -56,7 +59,7 @@ const App = () => {
           <div className="wrapper">
             <div className="content">
               <div className="img">
-                <img src={ samoraLangLogo } alt="" />
+                <img src={ joinSML } alt="" />
               </div>
               <div className="text">
                 <h2>O que acha de se tornar um <span className="bold">colaborador</span>?</h2>
@@ -67,6 +70,16 @@ const App = () => {
           </div>
         </section>
       </main>
+
+      <footer>
+        <div className="wrapper">
+          <div className="logo">
+            <img src={ samoraLangLogo } alt="" />
+          </div>
+
+          <p className="copyright">SamoraLang © Todos direitos reservados 2023</p>
+        </div>
+      </footer>
     </>
   );
 }

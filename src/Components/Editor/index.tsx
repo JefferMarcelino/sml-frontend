@@ -2,11 +2,12 @@ import axios from 'axios';
 import { useState } from 'react';
 import SimpleCodeEditor from "react-simple-code-editor";
 import { highlight, languages } from "prismjs/";
-import { Play } from 'phosphor-react';
+import { Clock, Play } from 'phosphor-react';
 
+import "./index.css";
 import "prismjs/components/prism-clike";
-import "prismjs/components/prism-javascript";
 import "prismjs/themes/prism.css";
+import "./custom-prism-theme.css";
 
 const Editor = () => {
   const [ code, setCode ] = useState('print("Olá, SamoraLang!");');
@@ -97,26 +98,30 @@ print("A soma dos números ao quadrado é: ", sum);`
   ];
 
   return (
-    <div className={`editor ${isLoading ? "disabled" : ""}`}>
-      <div id="dropdown-examples">
-        <span>Escolha um exemplo: </span>
-        <select onChange={(e) => handleDropdownItemClick(e.target.value)}>
-          { dropdownItems.map((item, index) => (
-            <option key={index} value={item.code}>
-              {item.label}
-            </option>
-          ))}
-        </select>
+    <div id="editor" className={`${isLoading ? "disabled" : ""}`}>
+      <div className="top">
+        <p>Experimente e pratique SamoraLang. Escreva o seu codigo abaixo e clique no botão no canto para rodar!</p>
+
+        <div id="dropdown-examples">
+          <span>Escolha um exemplo: </span>
+          <select onChange={(e) => handleDropdownItemClick(e.target.value)}>
+            { dropdownItems.map((item, index) => (
+              <option key={index} value={item.code}>
+                {item.label}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
       <div id="input">
         <Play
           id="runButton"
-          color="green"
           weight="fill"
           onClick={ handleClick }
           size={32}
         />
+
         <SimpleCodeEditor
           value={code}
           padding={10}
@@ -125,17 +130,27 @@ print("A soma dos números ao quadrado é: ", sum);`
           style={{
             fontFamily: "monospace",
             fontSize: 17,
-            border: "1px solid rgb(168, 163, 163)",
+            border: "2px solid rgba(255, 255, 255, 0.20)",
+            borderRadius: "0.5rem",
             minHeight: "250px",
             outline: "none",
-            paddingRight: "1.5rem"
+            paddingRight: "1.5rem",
+            background: "#1F1F1F"
           }}
         />
       </div>
 
       <div id="output">
         <div id="executionTime">
-          { executionTime.toFixed(0) } ms
+          <span>{ executionTime.toFixed(0) }</span> 
+          <span>ms</span> 
+          <div className="clock">
+            <Clock 
+              color="#1A1A1A" 
+              size={20}
+              weight='bold' 
+            />
+          </div>
         </div>
         { output }
       </div>

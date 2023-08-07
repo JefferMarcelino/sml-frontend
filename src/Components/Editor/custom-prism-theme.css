@@ -1,0 +1,16 @@
+.token.keyword {
+  color: #354F7C;
+}
+
+.token.string,
+.token.operator {
+  color: #664C92; 
+}
+
+.token.function {
+  color: #ED1C24;
+}
+
+.token.comment {
+  color: #2c3952;
+}

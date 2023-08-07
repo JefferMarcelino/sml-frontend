@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700&display=swap');
 
 * {
   margin: 0;
@@ -7,11 +7,26 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Exo 2', sans-serif;
+  background: #1A1A1A;
+  color: white;
+}
+
+#root  {
+  background: url("/bg.png") top right no-repeat;
+  background-size: 1000px;
 }
 
 a {
   text-decoration: underline;
   color: #ED1C24;
   font-weight: 500;
+}
+
+ul li {
+  list-style: none;
+}
+
+body p {
+  font-size: 1.25rem;
 }
