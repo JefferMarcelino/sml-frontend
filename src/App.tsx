@@ -44,13 +44,13 @@ const App = () => {
 
         <section id="playground">
           <div className="container">
-            <h2>SamoraLang Playground</h2>
+            <h2>Playground</h2>
 
             <div className="box">
-              <p>Experimente e pratique SamoraLang. Escreva o seu codigo abaixo e clique no botão no canto para rodar!</p>
-
               <Editor />
             </div>
+
+            <p className="copyright">SamoraLang Playground © 2023</p>
           </div>
         </section>
 

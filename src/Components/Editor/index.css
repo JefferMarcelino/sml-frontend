@@ -3,17 +3,39 @@
   pointer-events: none;
 }
 
+#editor .top {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+#editor .top p {
+  max-width: 450px;
+  width: 100%;
+}
+
 #editor #dropdown-examples {
   display: flex;
-  justify-content: end;
-  align-items: center;
-  gap: .5rem;
+  flex-direction: column;
+  gap: 1.5rem;
   margin-bottom: .5rem;
+  font-size: 1.25rem;
 }
   
 #editor #dropdown-examples select {
-  font-size: 1rem;
+  font-size: 1.1rem;
   padding: .2rem;
+  color: #ED1C24;
+  background: transparent;
+  border-radius: 0.25rem;
+  font-weight: 700;
+}
+
+#editor #dropdown-examples select option {
+  background: #1A1A1A;
 }
 
 #editor #input {
@@ -22,10 +44,11 @@
   
 #editor #runButton {
   position: absolute;
-  right: .5rem;
-  top: .5rem;
+  right: 1rem;
+  top: 1rem;
   cursor: pointer;
   z-index: 10;
+  color: #ED1C24;
 }
 
 #editor #output {
@@ -33,18 +56,39 @@
   min-height: 100px;
   height: 100%;
   width: 100%;
-  border: 1px solid rgb(189, 180, 180);
+  border: 2px solid rgba(255, 255, 255, 0.20);
+  border-radius: 0.5rem;
+  background: #1F1F1F;
   margin-top: 1rem;
   padding: 0.625rem;
   padding-right: 2.5rem;
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 
 #editor #output #executionTime {
   position: absolute;
-  right: 0rem;
-  top: 0rem;
-  background-color: green;
-  padding: .2rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  right: 1rem;
+  top: 1rem;
   color: white;
-  font-size: .9rem;
+}
+
+#editor #output #executionTime .clock {
+  background: #ED1C24;
+  border-radius: .25rem;
+  padding: .3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 793px) {
+  #editor #output #executionTime, 
+  #editor #input #runButton {
+    right: .5rem;
+    top: .5rem;
+  }
 }
