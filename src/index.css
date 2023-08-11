@@ -17,6 +17,7 @@ body {
 
 #root  {
   background: url("/bg.png") top right no-repeat;
+  background: url("/bg.webp") top right no-repeat;
   background-size: 1000px;
 }
 
