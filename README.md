@@ -6,13 +6,13 @@
   </a>
   <h3>Tech Timeline</h3>
   <div align="center">
-    The frontend for the online playground for <a target="_blank" href="https://github.com/GraHms/Samora-Lang">Samora-lang</a>
+    The frontend for the online playground for <a target="_blank" rel="noopener noreferrer" href="https://github.com/GraHms/Samora-Lang">Samora-lang</a>
     <div>
-      <a target="_blank" href="https://sml-playground.vercel.app/">View Demo</a>
+      <a target="_blank" rel="noopener noreferrer" href="https://sml-playground.vercel.app/">View Demo</a>
       ·
-      <a target="_blank" href="https://github.com/JefferMarcelino/sml-frontend/issues">Report Bug</a>
+      <a target="_blank" rel="noopener noreferrer" href="https://github.com/JefferMarcelino/sml-frontend/issues">Report Bug</a>
       ·
-      <a target="_blank" href="https://github.com/JefferMarcelino/sml-frontend/issues">Request Feature</a>
+      <a target="_blank" rel="noopener noreferrer" href="https://github.com/JefferMarcelino/sml-frontend/issues">Request Feature</a>
     </div>
   </div>
 </div>
