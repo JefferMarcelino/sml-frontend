@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from 'redaxios';
 import { useEffect } from 'react';
 import './App.css';
 import Editor from './Components/Editor';
@@ -9,6 +9,7 @@ import arrowRight from "./assets/arrow-right.svg";
 import samoraLangLogo from "/samoralang-logo.svg";
 
 const App = () => {
+  const year = new Date().getFullYear()
   useEffect(() => {
     const fetchData = () => {
       axios.get(import.meta.env.VITE_TRIGGER_URL)
@@ -52,7 +53,7 @@ const App = () => {
               <Editor />
             </div>
 
-            <p className="copyright">SamoraLang Playground © {new Date().getFullYear()}</p>
+            <p className="copyright">SamoraLang Playground © {year}</p>
           </div>
         </section>
 
@@ -79,10 +80,10 @@ const App = () => {
       <footer>
         <div className="wrapper">
           <div className="logo">
-            <img src={ samoraLangLogo } alt="" />
+            <img src={ samoraLangLogo } alt="Samora Lang logo" />
           </div>
 
-          <p className="copyright">SamoraLang © Todos direitos reservados {new Date().getFullYear()}</p>
+          <p className="copyright">SamoraLang © Todos direitos reservados {year}</p>
         </div>
       </footer>
     </>

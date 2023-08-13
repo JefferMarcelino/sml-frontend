@@ -52,7 +52,7 @@ body #hero .content .text #goToPlaugroundBtn {
   gap: .5rem;
   align-items: center;
   border-radius: 4px;
-  background: linear-gradient(196deg, #ED1C24 28.47%, #530A0D 88.82%);
+  background: linear-gradient(196deg, var(--primary-color) 28.47%, #530A0D 88.82%);
   color: white;
   text-decoration: none;
   max-width: 200px;
@@ -60,7 +60,7 @@ body #hero .content .text #goToPlaugroundBtn {
 }
 
 body .content .text .bold {
-  color: #ED1C24;
+  color: var(--primary-color);
   font-weight: 500;
 }
 
@@ -82,7 +82,7 @@ body .copyright {
 }
 
 body .container h2 {
-  color: #ED1C24;
+  color: var(--primary-color);
   font-size: 2.625rem;
 }
 

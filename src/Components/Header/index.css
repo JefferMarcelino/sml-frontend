@@ -29,7 +29,7 @@
   bottom: -.5rem;
   left: 0;
   position: absolute;
-  background: linear-gradient(270deg, #ED1C24 0%, #530A0D 100%);
+  background: linear-gradient(270deg, var(--primary-color) 0%, #530A0D 100%);
   transition: .3s ease-in-out;
 }
 
