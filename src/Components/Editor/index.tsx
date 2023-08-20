@@ -18,31 +18,26 @@ const Editor = () => {
   const handleClick = async () => {
     setIsLoading(true);
 
-    const startTime = performance.now();
-
     try {  
       const result = await axios.post(import.meta.env.VITE_BASE_API_URL, {
         code: code
       });
+
+      console.log(result.data);
   
       setOutput(result.data.result);
+      setExecutionTime(result.data.time);
     } catch (error) {
       setOutput("OPS!!! Algo correu mal!");
     }
-    
-    const endTime = performance.now();
-    const executionTime = endTime - startTime;
-    setExecutionTime(executionTime);
 
     setIsLoading(false);
   };
 
   const handleDropdownItemClick = (item: string) => {
-    // Modify this function to add the selected item to the textarea
     setCode(item);
   };
 
-  // Dropdown items with examples
   const dropdownItems = [
     {
       label: "Olá SamoraLang",
