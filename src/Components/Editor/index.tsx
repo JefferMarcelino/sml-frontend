@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from 'redaxios';
 import { useState } from 'react';
 import SimpleCodeEditor from "react-simple-code-editor";
 import { highlight, languages } from "prismjs/";
@@ -17,7 +17,7 @@ const Editor = () => {
 
   const handleClick = async () => {
     setIsLoading(true);
-
+ 
     try {  
       const result = await axios.post(import.meta.env.VITE_BASE_API_URL, {
         code: code
@@ -95,7 +95,7 @@ print("A soma dos números ao quadrado é: ", sum);`
   return (
     <div id="editor" className={`${isLoading ? "disabled" : ""}`}>
       <div className="top">
-        <p>Experimente e pratique SamoraLang. Escreva o seu codigo abaixo e clique no botão no canto para rodar!</p>
+        <p>Experimente e pratique SamoraLang. Escreva o seu código abaixo e clique no botão no canto para rodar!</p>
 
         <div id="dropdown-examples">
           <span>Escolha um exemplo: </span>
@@ -137,13 +137,13 @@ print("A soma dos números ao quadrado é: ", sum);`
 
       <div id="output">
         <div id="executionTime">
-          <span>{ executionTime.toFixed(0) }</span> 
-          <span>ms</span> 
+          <span>{ executionTime.toFixed(0) }</span>
+          <span>ms</span>
           <div className="clock">
-            <Clock 
-              color="#1A1A1A" 
+            <Clock
+              color="#1A1A1A"
               size={20}
-              weight='bold' 
+              weight='bold'
             />
           </div>
         </div>

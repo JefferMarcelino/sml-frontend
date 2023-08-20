@@ -24,11 +24,11 @@
   margin-bottom: .5rem;
   font-size: 1.25rem;
 }
-  
+
 #editor #dropdown-examples select {
   font-size: 1.1rem;
   padding: .2rem;
-  color: #ED1C24;
+  color: var(--primary-color);
   background: transparent;
   border-radius: 0.25rem;
   font-weight: 700;
@@ -41,14 +41,14 @@
 #editor #input {
   position: relative;
 }
-  
+
 #editor #runButton {
   position: absolute;
   right: 1rem;
   top: 1rem;
   cursor: pointer;
   z-index: 10;
-  color: #ED1C24;
+  color: var(--primary-color);
 }
 
 #editor #output {
@@ -77,7 +77,7 @@
 }
 
 #editor #output #executionTime .clock {
-  background: #ED1C24;
+  background: var(--primary-color);
   border-radius: .25rem;
   padding: .3rem;
   display: flex;
@@ -86,7 +86,7 @@
 }
 
 @media (max-width: 793px) {
-  #editor #output #executionTime, 
+  #editor #output #executionTime,
   #editor #input #runButton {
     right: .5rem;
     top: .5rem;
