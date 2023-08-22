@@ -4,7 +4,7 @@
   <a href="https://github.com/JefferMarcelino/tech-timeline">
     <img src=".github/samora-lang-logo.svg" alt="Logo" width="100" />
   </a>
-  <h3>Tech Timeline</h3>
+  <h3>SamoraLang Playground</h3>
   <div align="center">
     The frontend for the online playground for <a target="_blank" rel="noopener noreferrer" href="https://github.com/GraHms/Samora-Lang">Samora-lang</a>
     <div>
