@@ -9,7 +9,6 @@ const Header = () => {
           <ul>
             <li>Documentação</li>
             <li>Exemplos</li>
-            <li>Playground</li>
           </ul>
         </nav>
         <div className="logo">
