@@ -1,82 +1,91 @@
-import axios from 'axios';
-import { useState } from 'react';
-import SimpleCodeEditor from "react-simple-code-editor";
-import { highlight, languages } from "prismjs/";
-import { Play } from 'phosphor-react';
-
+import axios from 'redaxios';
+import { useEffect } from 'react';
 import './App.css';
-import "prismjs/components/prism-clike";
-import "prismjs/components/prism-javascript";
-import "prismjs/themes/prism.css";
+import Editor from './Components/Editor';
+import Header from './Components/Header';
+import joinSML from "/join-sml.png";
+import joinSMLWebp from "/join-sml.webp";
+import arrowRight from "./assets/arrow-right.svg";
+import samoraLangLogo from "/samoralang-logo.svg";
 
 const App = () => {
-  const [ code, setCode ] = useState('print("Hello, World!");');
-  const [ output, setOutput ] = useState('');
-  const [ isLoading, setIsLoading ] = useState(false);
-  const [ executionTime, setExecutionTime ] = useState(0);
+  const year = new Date().getFullYear()
+  useEffect(() => {
+    const fetchData = () => {
+      axios.get(import.meta.env.VITE_TRIGGER_URL)
+        .then(response => {
+          console.log('Response:', response.data);
+        })
+        .catch(() => {
+          console.error('Error:');
+        });
+    };
 
-  const handleClick = async () => {
-    setIsLoading(true);
-
-    const startTime = performance.now();
-
-    try {  
-      const result = await axios.post(import.meta.env.VITE_BASE_API_URL, {
-        code: code
-      });
-  
-      setOutput(result.data.result);
-    } catch (error) {
-      setOutput("Algo correu mal!");
-    }
-    
-    const endTime = performance.now();
-    const executionTime = endTime - startTime;
-    setExecutionTime(executionTime);
-
-    setIsLoading(false);
-  };
+    fetchData();
+  });
 
   return (
     <>
-      <div className="container">
-        <h1>SamoraLang Playground</h1>
+      <Header />
 
-        <div className="box">
-          <p>Experimente e pratique SamoraLang. Escreva o seu codigo abaixo e clique no botão no canto para rodar!</p>
+      <main>
+        <section id="hero">
+          <div className="wrapper">
+            <div className="content">
+              <div className="text">
+                <span>Experimente um novo paradigma de <span className="bold">programação!</span></span>
+                <p>Descubra a magia da codificação no nosso Playground! Experimente agora mesmo.</p>
 
-          <div className={`editor ${isLoading ? "disabled" : ""}`}>
-            <Play 
-              id="runButton" 
-              color="green" 
-              weight="fill"
-              onClick={ handleClick } 
-              size={32}
-            />
-
-            <SimpleCodeEditor
-              value={code}
-              padding={10}
-              onValueChange={(code) => setCode(code)}
-              highlight={(code) => highlight(code, languages.js, "js")}
-              style={{
-                fontFamily: "monospace",
-                fontSize: 17,
-                border: "1px solid rgb(168, 163, 163)",
-                minHeight: "250px",
-                outline: "none",
-              }}
-            />
-
-            <div id="output">
-              <div id="executionTime">
-                { executionTime.toFixed(0) } ms
+                <a id="goToPlaugroundBtn" href="#playground">
+                  Playground
+                  <img src={ arrowRight } alt="" />
+                </a>
               </div>
-              { output }
             </div>
           </div>
+        </section>
+
+        <section id="playground">
+          <div className="container">
+            <h2>Playground</h2>
+
+            <div className="box">
+              <Editor />
+            </div>
+
+            <p className="copyright">SamoraLang Playground © {year}</p>
+          </div>
+        </section>
+
+        <section id="join-samora-lang">
+          <div className="wrapper">
+            <div className="content">
+              <div className="img">
+                <picture>
+                  <source srcSet={ joinSMLWebp } />
+                  <img src={ joinSML } alt="" />
+                </picture>
+
+              </div>
+              <div className="text">
+                <h2>O que acha de se tornar um <span className="bold">colaborador</span>?</h2>
+                <p>Junte-se ao projecto Samora Lang! Se você é um entusiasta do desenvolvimento de software e deseja fazer a diferença em um ambiente de código aberto, esta é a sua chance.</p>
+                <p>Contribua directamente com o <a href="https://github.com/GraHms/Samora-Lang" target='_blank' rel="noreferrer noopener">interpretador</a> ou no <a href="https://github.com/JefferMarcelino/sml-playground" target='_blank' rel="noreferrer noopener">backend do playground</a> e esse <a href="https://github.com/JefferMarcelino/sml-frontend" target='_blank' rel="noreferrer noopener">website</a>.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div className="wrapper">
+          <div className="logo">
+            <img src={ samoraLangLogo } alt="Samora Lang logo" />
+          </div>
+
+          <p className="copyright">SamoraLang © Todos direitos reservados {year}</p>
         </div>
-      </div>
+      </footer>
     </>
   );
 }

@@ -1,63 +1,154 @@
 body {
   width: 100%;
-  padding: 1.25rem;
-  background: rgb(236, 234, 234);
+  margin-bottom: 1rem;
 }
 
-body .container {
-  max-width: 1000px;
+body section {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding: 1.25rem;
+}
+
+body #hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+body .wrapper {
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  border: 1px solid rgb(168, 163, 163);
-  border-radius: 1rem;
-  padding: 1rem;
 }
 
-body .container h1 {
-  margin-bottom: 1rem;
+body .content {
+  gap: 1rem;
+  width: 100%;
+}
+
+body .content .text {
+  max-width: 550px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+body #hero .content .text span {
+  font-size: 4rem;
+  line-height: 110%;
+  font-weight: 700;
+}
+
+body #hero .content .text {
+  font-size: 1.25rem;
+}
+
+body #hero .content .text #goToPlaugroundBtn {
+  padding: 1rem 1.5rem;
+  font-size: 1.375rem;
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  border-radius: 4px;
+  background: linear-gradient(196deg, var(--primary-color) 28.47%, #530A0D 88.82%);
+  color: white;
+  text-decoration: none;
+  max-width: 200px;
+  width: 100%;
+}
+
+body .content .text .bold {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+body #playground .container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  border: 2px solid rgba(255, 255, 255, 0.20);
+  padding: 4rem 2rem;
+  background: #1A1A1A;
+  border-radius: .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+body .copyright {
+  color: #767676;
+}
+
+body .container h2 {
+  color: var(--primary-color);
+  font-size: 2.625rem;
 }
 
 body .container p {
   margin-bottom: 1rem;
 }
 
+body #playground {
+  margin: 0;
+  padding: 0;
+  margin-top: 10rem;
+}
+
 body .box {
   width: 100%;
 }
 
-body .editor {
-  position: relative;
+body #join-samora-lang .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-body .editor #runButton {
-  position: absolute;
-  right: .5rem;
-  top: .5rem;
-  cursor: pointer;
-  z-index: 10;
-}
-
-body .editor #output {
-  position: relative;
-  min-height: 100px;
-  height: 100%;
+body #join-samora-lang .content .img {
   width: 100%;
-  border: 1px solid rgb(189, 180, 180);
-  margin-top: 1rem;
-  padding: 0.625rem;
+  max-width: 400px;
 }
 
-body .editor #output #executionTime {
-  position: absolute;
-  right: 0rem;
-  top: 0rem;
-  background-color: green;
-  padding: .2rem;
-  color: white;
-  font-size: .9rem;
+body #join-samora-lang .content .img img {
+  width: 100%;
 }
 
-body .editor.disabled {
-  opacity: 0.5;
-  pointer-events: none;
+body #join-samora-lang .content .text {
+  max-width: 550px;
+}
+
+body #join-samora-lang .content .text h2 {
+  font-size: 2.625rem;
+  margin-bottom: 1rem;
+}
+
+body #join-samora-lang .content .text p {
+  line-height: 1.5rem;
+  font-size: 1.25rem;
+  color: #d1d1d1;
+  font-weight: 300;
+}
+
+footer {
+  padding: 1.25rem;
+}
+
+footer .wrapper {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-top: 2px solid rgba(255, 255, 255, 0.20);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 470px) {
+  body #hero .content .text span {
+    font-size: 3rem;
+  }
 }
