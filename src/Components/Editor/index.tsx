@@ -147,7 +147,9 @@ print("A soma dos números ao quadrado é: ", sum);`
             />
           </div>
         </div>
-        { output }
+        <pre>
+          { output }
+        </pre>
       </div>
     </div>
   );
